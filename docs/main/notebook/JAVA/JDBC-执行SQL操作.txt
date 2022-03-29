@@ -1,0 +1,27 @@
+1.加载驱动
+Class.forName("com.mysql.jdbc.Driver");
+2.连接驱动
+String url ="jdbc:mysql://localhost:3306/jdbc_bd";
+//SqlServer的Url"jdbc:sqlserver://localhost:1433;database=(sjk)"
+String user = "root";
+String password ="root";
+Connection con = DriverManager.getConnection(url,user,password);
+3.编写SQL语句
+String sql = "select count(*) forom student";
+Statement st = con.createStatement();
+4.执行SQL语句
+ResultSet rs = st.executeQuery(sql);
+5.返回结果集(这种是以角标的方式)
+if(rs.next()){
+	int num = rs.getInt(1);
+	System.out.println(num);
+}
+		5.返回结果集(这种是以（列的名字）的方式)列名可以改
+		if(rs.next()){
+		int num = rs.getInt("count(*)");
+		System.out.println(num);
+		}
+6.释放资源
+	rs.close();
+	con.close();
+	st.close();

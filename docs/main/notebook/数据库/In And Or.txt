@@ -1,0 +1,13 @@
+SQL Server  in or and 连接字符  
+
+
+	IN 操作符允许我们在 WHERE 子句中规定多个值。
+	SELECT column_name(s) FROM table_name WHERE column_name IN (value1,value2,...)
+	column_name: 为表内In的某列的列名 value1，value2 为表内的筛选值 在表内的 column_name 列筛选 value1，value2
+	
+	
+	AND 和 OR 可在 WHERE 子语句中把两个或多个条件结合起来。
+
+如果第一个条件和第二个条件都成立，则 AND 运算符显示一条记录。
+
+如果第一个条件和第二个条件中只要有一个成立，则 OR 运算符显示一条记录。

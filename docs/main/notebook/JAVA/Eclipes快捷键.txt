@@ -1,0 +1,7 @@
+eclipse快捷键：
+
+折叠代码：方法前有个小+号
+windows -->preferences-->
+General-->keys—>搜素coll->Collapse 设置快捷键
+
+整理代码：ctrl+shift+F

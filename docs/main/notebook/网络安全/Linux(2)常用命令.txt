@@ -1,0 +1,22 @@
+			Linux（常用命令）
+根目录（/）
+家目录（/root）
+
+
+ls(显示所有目录) ./（查看当前目录下所有文件和目录）  -a（查看所有文件包括隐藏文件以.开头的文件）
+cd 某个(进入某个目录) cd ..(返回上一级)
+clear(清屏)
+exit（退出当前用户）reboot（重启系统）
+
+
+pwd(显示当前所在的目录)
+mkdir text(创建text目录)
+rmdir (刪除空目录)
+rm (刪除文件或者目录，用法rm -rf test.txt(-r 表示递归 -f 表示强制))
+cp (拷贝文件，用法 cp old.txt /tmp/new.txt 常用来备份如果拷贝目录需要加参数 -r )
+mv（ 重命名或者移动文件或者目录 mv old.txt new.txt）
+touch (创建文件 用法touch test.txt)
+find(查找文件或目录 find /home -name "test.txt"  查找/home目录下test.txt 的文件(*代表所有))
+cat  文件名.后缀（查看文件内容）
+vi 文件名.后缀(写入内容) 按i（in）（写入）写完后键盘esc退出编辑模式 ：wq（：wq保存退出）
+echo (回写)

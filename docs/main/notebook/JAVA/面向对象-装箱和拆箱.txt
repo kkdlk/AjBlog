@@ -1,0 +1,36 @@
+怎么把基本数据类型变为包装类？
+
+称之为->装箱操作
+
+int a = 10;
+
+Integer num  = new Integer(a);
+System.out.println(num);
+
+本来打印对象是打印地址值 但是Integer内部存在toString
+
+
+把字符串转成Integer 类型
+
+
+
+
+1.如何把一个字符串转成包装类
+Integer i = new Integer("123");
+System.out.println(i);
+
+控制台	12 
+
+2.把包装类转成字符串
+String str = i2.toString();
+System.out.println(str);
+
+3.把字符串转成基本数据类型
+
+String str3 = "200";
+转为int
+int i3 = Integer.parseInt(str3);
+转为double
+double d3  = Double.parseDouble(str3);
+
+4.字符型默认为false

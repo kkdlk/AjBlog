@@ -1,0 +1,33 @@
+1、开始——运行——eventvwr.msc，
+2、打开事件查看器——Windows日志——应用程序，
+3、看到故障详细描述，简单搜索这个内容，发现VIA本身要禁用，
+4、回去服务设置那里，禁用VIA。
+5、重新启动，服务启动成功。
+
+
+
+/***Windows XP 重置 Winsock操作：1、单击“开始”，运行中输入cmd。2、然后输入命令 netsh winsock reset。3、.重启计算机。
+
+将TCP/IP协议打开后在最后All/ip内动态端口设置为1433
+
+服务起不来的解决方法
+1.查看配置文件语法
+
+ 
+1
+vim /etc/*
+ 
+2.查看端口
+ 
+1
+netstat -an | grep *
+ 
+3.查看进程
+ 
+1
+ps aux | grep *
+ 
+4.看错误日志
+ 
+1
+tail  -f /var/log/messages

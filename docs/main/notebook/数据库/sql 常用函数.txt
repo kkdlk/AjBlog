@@ -1,0 +1,62 @@
+函数和方法的区别
+
+函数：指的是单独的功能不牵扯面向对象
+方法：面向过程中通过面向对象调用函数
+
+常用函数：
+判断是否为NULL   isnull
+
+使用范围： 在select 语句或者子语句中
+UPdate delete
+
+分类：数值函数，日期和时间函数，流程函数，其他函数
+
+
+字符串函数有：
+
+CONCAT(S1,‘S2’,...Sn)
+	将传入的字符连接成字符串
+	任何字符串和NULL连接都为null
+insert（str，x,y,instr） 
+	select insert ('myxq123',5,3,'lk')
+	把myxq123 从前往后数第5个字符串往后3个字			符换为‘lk’
+	5：第几个字符开始 3：换几个
+	字符串替换
+Lower(str)和UPPER（str）
+	字符串变为小写或者大写
+LEFT(STR,X)和RIGHT（str,x）
+	LEFT(STR,X)：从最左边获取第x个字符
+	RIGHT（str,x）：从最右边获取第x个字符
+
+数值函数：
+ABS(X)返回x的绝对值
+
+ceil(x) 向上取整  ceil(1.1) = 2
+
+floor(x)向下取整	  floor(1.1)= 1
+
+mod(x,y)返回X/Y的模
+
+RAND() 返回0-1的随机数
+
+ceil(RAND()*10)取 0-10的随机数
+
+
+
+时间函数：
+select from_U
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

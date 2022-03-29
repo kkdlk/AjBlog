@@ -1,0 +1,54 @@
+黄金组合LAMP
+
+Linux+APAChe+Mysql+PHP
+
+环境搭建：phpstudy：一款集成了apache+Mysql+PHP 并且已经关联好了
+开发PHP：Zend Studio  或者 Norepad++ / PHP Coder  
+
+1、分开安装的话首先apache+mysql+php
+   详细教程：https://www.cnblogs.com/bytebull/p/7927542.html
+  （1） 1>httpd-2.4.18-win64-VC14.zip 	下载地址: http://www.apachelounge.com/download/
+				apache(阿帕奇)
+		2>php-5.6.16-Win32-VC11-x64.zip 下载地址: http://windows.php.net/download/
+				Windows下的PHP的版本更新很快，最新的是PHP7了已经，
+				现在的Windows版本可以在PHP官方PHP For Windows（http://windows.php.net/download/）下载，
+				下载的时候同版本有VC9 x86 Non Thread Safe、VC9 x86 Thread Safe、VC6 x86 Non Thread Safe、VC6 x86 Thread Safe等四个版本。
+				那么这些版本有什么区别呢？
+				VC9的版本是用legacy VS 2008编译的，VC6的版本是用legacy VS6编译的。
+				如果你是在windows下使用IIS+PHP的话，你需要下载VC9的版本。 
+				如果你是在windows下使用Apache+PHP的话，你需要下载VC6的版本。
+				Non Thread Safe是指非线程安全，Thread Safe则是指线程安全。
+				如果是使用ISAPI的方式来运行PHP就必须用Thread Safe(线程安全)的版本；而用FastCGI模式运行PHP的话就没有必要用线程安全检查了，
+				用None Thread Safe(NTS，非线程安全)的版本能够更好的提高效率。
+				这样一来，如何选择您适用的PHP版本就迎刃而解了，去下载适合您系统的PHP吧。
+	
+		3>mysql-5.6.29-winx64.zip  		下载地址: http://dev.mysql.com/downloads/mysql/
+
+		4> MySQL-Front   				下载地址：http://www.mysqlfront.de/
+
+ （2）1.将mysql安装后的/bin的绝对路径复制添加到环境变量Path中最后有分号（;）
+	  2.将下载好的httpd-2.4.7-win64-VC11.zip解压出Apache24文件夹并放到自己的安装目录（我的目录是D:/File/phpEnv）
+	  3.然后进入Apache24文件夹下的conf目录(Apache24/conf/)，找到httpd.conf文件用记事本打开并修改里面的部分内容
+	  4.(以下路径相关都应该根据自己的解压路径不同做相应修改！！)
+
+		(1) 修改ServerRoot Apache的根路径:
+
+		<37行>ServerRoot "c:/Apache24"  改成=>  ServerRoot "D:/File/phpEnv/Apache24"
+		(2) 修改ServerName你的主机名称:(255行)ServerName www.example.com:80将前面的#去掉,该属性在从命令行启动Apache时需要用到。
+		(3) 修改DocumentRoot Apache访问的主文件夹目录,就是php、html代码文件的位置。
+			Apache默认的路径是在htdocs(Apache24/htdocs)下面,里面会有个简单的入口文件index.html。
+			这个路径可以自己进行修改,我这里将其配置在我自己新建的www文件夹里(D:/File/phpEnv/www)，
+			可根据自己的需求做相应更改。
+		(4)修改入口文件配置:DirectoryIndex一般情况下我们都是以index.php、index.html、index.htm作为web项目的入口。
+		Apache默认的入口只有index.html需要添加其他两个的支持，当然这个入口文件的设置可以根据自己的需要增减,如果要求比较严格的话可以只写一个index.php,
+		这样在项目里面的入口就只能是index.php复制代码
+		(5)设定serverscript的目录:
+		(6)改cgi-bin目录
+	5>接下来就可以启动Apache了鼠标点击(开始)à(运行)(或Win+R),输入cmd,打开命令提示符。
+	然后进入D:/File/phpEnv/Apache24/bin目录下回车httpd回车，如图所示.
+
+
+1、基础语法
+<?php
+	echo"Hello world";
+?>
